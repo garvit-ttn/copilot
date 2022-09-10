@@ -1,10 +1,11 @@
 FROM alpine:latest
 
-MAINTAINER alex <alexwhen@gmail.com> 
+MAINTAINER garvit <garvit.mishra@tothenew.com> 
 
 RUN apk --update add nginx
 
 COPY 2048 /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
 
